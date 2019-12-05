@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>2018 Central Park Squirrel Census Data</title>
+    </head>
+    <body>
+        <h1>2018 Central Park Squirrel Census Data</h1>
+        <h2>A list of all 3023 squirrel sightings (click to edit)</h2>
+	<a href="{% url 'tracker:add'%}">Create a new sighting</a>
+        <br>
+        <br>
+	<a href="{% url 'tracker:stats'%}">General stats about the sightings</a>
+        <br>
+        <br>
+        {% if squirrels %}
+                <ol>
+                    {% for squirrel in squirrels %}
+                        <li>
+                                <a href='/sightings/{{squirrel.Unique_Squirrel_ID}}/'>{{ squirrel }}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+        {% else %}
+                <p>No sightings</p>
+        {% endif %}
+    </body>
+</html>
