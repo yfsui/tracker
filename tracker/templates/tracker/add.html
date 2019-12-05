@@ -1,111 +1,17 @@
-<!DOCTYPE html>                                                                       <html>
-    <head>
-    <title>Add A New Sighting</title>
-    <meta charset="utf-8">
-    
-    </head>
-    <body>
-    
-
-        <div class="miniwrap">
-        <h1>Add a new sighting</h1>
-        <form action="{% url 'trackers:add'%}" method="POST">
-
-
-        {% csrf_token %}
-        <h4>Longitude:</h4>
-        <input type="number" name="Longitude">
-
-        <h4>Unique_Squirrel_ID:</h4>
-        <input type="text" name="Unique_Squirrel_ID">
-
-	<h4>Other_Activities: </h4>
-	<input type='text' name='Other_Activities'>
-
-	<h4>Latitude:</h4>
-	<input type='number' name='Latitude'>
-
-	<h4>Date:</h4>
-	<input type="date" name="Date"  min="2000-01-01" max="2020-11-31">
-
-	<h4>Specific_Location: </h4>
-	<input type='text' name="Specific_Location">
-
-	<h4>Shift:</h4>
-	<input type="checkbox" name="Shift" value="AM"> AM<br>
-	<input type="checkbox" name="Shift" value="PM" checked> PM<br>
-
-	<h4>Age: </h4>
-	<input type='checkbox' name='Age' value='Adult'> Adult<br>
-	<input type='checkbox' name='Age' value='Juvenile'checked> Juvenile<br>
-
-	<h4>Primary_Fur_Color: </h4>
-	<input type='checkbox' name='Primary_Fur_Color' value='Gray'> Gray<br>
-	<input type='checkbox' name='Primary_Fur_Color' value='Cinnamon'> Cinnamon<br>
-	<input type='checkbox' name='Primary_Fur_Color' value='Black'checked> Black<br>
-
-	<h4>Location</h4>
-	<input type='checkbox' name='Location' value='Ground Plane'checked> Ground Plane <br>
-	<input type='checkbox' name='Location' value='Above Ground'> Above Ground <br>
-
-	<h4>Running: </h4>
-	<input type='checkbox' name='Running' value='True'> True<br>
-	<input type='checkbox' name='Running' value='False'checked> False<br>
-
-	<h4>Chasing: </h4>
-	<input type='checkbox' name='Chasing' value='True'> True<br>
-	<input type='checkbox' name='Chasing' value='False'checked> False<br>
-
-	<h4>Climbing: </h4>
-	<input type='checkbox' name='Climbing' value='True'> True<br>
-	<input type='checkbox' name='Climbing' value='False'checked> False<br>
-
-	<h4>Eating: </h4>
-	<input type='checkbox' name='Eating' value='True'> True<br>
-	<input type='checkbox' name='Eating' value='False'checked> False<br>
-
-	<h4>Foraging: </h4>
-	<input type='checkbox' name='Foraging' value='True'> True<br>
-	<input type='checkbox' name='Foraging' value='False'checked> False<br>
-
-	<h4>Kuks: </h4>
-	<input type='checkbox' name='Kuks' value='True'> True<br>
-	<input type='checkbox' name='Kuks' value='False'checked> False<br>
-
-	<h4>Moans: </h4>
-	<input type='checkbox' name='Moans' value='True'> True<br>
-	<input type='checkbox' name='Moans' value='False'checked> False<br>
-
-	<h4>Tail_flags: </h4>
-	<input type='checkbox' name='Tail_flags' value='True'> True<br>
-	<input type='checkbox' name='Tail_flags' value='False'checked> False<br>
-
-	<h4>Tail_twitches: </h4>
-	<input type='checkbox' name='Tail_twitches' value='True'> True<br>
-	<input type='checkbox' name='Tail_twitches' value='False'checked> False<br>
-
-	<h4>Quaas: </h4>
-	<input type='checkbox' name='Quaas' value='True'> True<br>
-	<input type='checkbox' name='Quaas' value='False'checked> False<br>
-
-	<h4>Approaches: </h4>
-	<input type='checkbox' name='Approaches' value='True'> True<br>
-	<input type='checkbox' name='Approaches' value='False'checked> False<br>
-
-	<h4>Indifferent: </h4>
-	<input type='checkbox' name='Indifferent' value='True'> True<br>
-	<input type='checkbox' name='Indifferent' value='False'checked> False<br>
-
-	<h4>Runs_from: </h4>
-	<input type='checkbox' name='Runs_from' value='True'> True<br>
-	<input type='checkbox' name='Runs_from' value='False'checked> False<br>
-
-        
-
-	<br>
-        <br>
-        <input type="submit" value="Create">
-        <a href="{% url 'tracker:all'%}">Go back!</a>
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <title>Add a new sighting</title>
+        </head>
+        <body>
+                <h1>Add a new sighting</h1>
+                <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Add">
+                </form>
+                <br>
+                <a href=" 'tracker:all' %}">Back to the main page</a >
+        </body>
 </html>
