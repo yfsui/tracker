@@ -5,7 +5,7 @@ def all(request):
     squirrels = Squirrel.objects.all()
     context = {'squirrels': squirrels}
     return render(request, 'tracker/all.html', context)
-# Test before push!!!
+
 def add(request):
     if request.method=="POST":
         form = SquirrelForm(request.POST)
@@ -16,6 +16,7 @@ def add(request):
         form = SquirrelForm()
     context={'form':form}
     return render(request,'tracker/add.html',context)
+
 def update(request, Unique_Squirrel_ID):
     squirrel = Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method == "POST":
@@ -27,6 +28,7 @@ def update(request, Unique_Squirrel_ID):
         form = SquirrelForm(instance = squirrel)
     context={'form':form}
     return render(request,'tracker/update.html',context)
+
 def stats(request):
     total = Squirrel.objects.all().count()
     adult = Squirrel.objects.filter(Age = 'Adult').count()
@@ -45,4 +47,3 @@ def map(request):
     squirrels = Squirrel.objects.all()[:100]
     context = {'squirrels':squirrels}
     return render(request, 'tracker/map.html',context)
-# Create your views here.
