@@ -5,16 +5,13 @@ from django.utils.translation import gettext as _
 class Squirrel(models.Model):
     
     Longitude = models.FloatField(
-    help_text=_('Longitude'),
     )
 
     Latitude = models.FloatField(
-    help_text=_('Latitude'),
     )   
     
     Unique_Squirrel_ID = models.CharField(
     max_length=100, 
-    help_text=_('ID of squirrel'), 
     )
     
     PM='PM'
@@ -31,7 +28,6 @@ class Squirrel(models.Model):
 
 
     Date = models.DateField(
-    help_text=_('Date of squirrel'),
     )
 
     Adult='Adult'
@@ -47,7 +43,6 @@ class Squirrel(models.Model):
     max_length=20, 
     choices=Age_CHOICES,  
     default=Other,
-    help_text=_('Age of Squirrel'),
     )
 
     Gray='Gray'
@@ -80,12 +75,10 @@ class Squirrel(models.Model):
     max_length=100, 
     choices=Location_CHOICES,  
     default=Other,
-    help_text=_('locations of squirrel'),
     )
 
     Specific_Location= models.CharField(
     max_length=100,
-    help_text=_('Specific Locations of Squirrel'),
     )
     
     Running = models.NullBooleanField()
@@ -100,7 +93,6 @@ class Squirrel(models.Model):
 
     Other_Activities = models.CharField(
             max_length=100,
-            help_text=_('Other activities'),
             )
 
     Kuks = models.NullBooleanField()
