@@ -38,7 +38,7 @@ def stats(request):
 
     context = {'total':total,
     'adult':adult,
-    'juvenile' = juvenile,
+    'juvenile':juvenile,
     'fur':fur,
     'location':location,}
     return render(request,'tracker/stats.html',context)
