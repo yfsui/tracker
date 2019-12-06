@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-                <title>Squirrel Statistics</title>
                 <meta charset = 'utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        /* Style the header */
+        .header {
+          padding: 80px;
+          text-align: center;
+          background: #1abc9c;
+          color: white;
+        }
+        /* Increase the font size of the h1 element */
+        .header h1 {
+          font-size: 40px;
+        }
+        </style>
+		
+		<title>Squirrel Statistics</title>
         </head>
+
         <body>
+		<div class="header">
                 <h1>Some statistics about squirrel sightings</h1>
-                <style>
+		</div>
+		<style>
                 table {
                   width:50%;
                 }
@@ -25,11 +47,13 @@
                   background-color: #fff;
                 }
                 table th {
-                  background-color: black;
+                  background-color: #1abc9c;
                   color: white;
                 }
                 </style>
-                <table style="width:50%">
+		<br>
+		<br>
+                <table align='center' style="width:50%">
                         <tr>
                                 <th>Attributes</th>
                                 <th>Values</th>
@@ -57,5 +81,6 @@
                 </table>
                 <br>
 		<a href="{% url 'tracker:all' %}">Back to the main page</a >
+
         </body>
 <html>
