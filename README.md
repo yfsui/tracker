@@ -1,5 +1,5 @@
 <h1>A Web App: 2018 Central Park Squirrel Sightings</h1>
-<h3>We kept track of all the known squirrels in the central park and built a web app which allow others to add, update, and view squirrel data. <h3>
+<p>We kept track of all the known squirrels at central park and built a web app which would allow others to add, update, and view squirrel data. We created a map that displayed the locations of 100 squirrel sightings. Also, we listed all squirrels with detailed information about their latitude, longitude, unique squirrel ID, shift, date, age, fur color and habits. <p>
 
 
 <h4> The link to the app:</h4>
