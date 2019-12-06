@@ -2,11 +2,32 @@
 <html lang="en">
         <head>
                 <meta charset="utf-8">
-                <title>Add a new sighting</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+        	<title>Add a new sighting</title>
+	<style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        /* Style the header */
+        .header {
+          padding: 80px;
+          text-align: center;
+          background: #1abc9c;
+          color: white;
+        }
+        /* Increase the font size of the h1 element */
+        .header h1 {
+          font-size: 40px;
+        }
+        </style>
         </head>
+
         <body>
+		<div class='header'>
                 <h1>Add a new sighting</h1>
-                <form method="post">
+		</div>
+		<form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <input type="submit" value="Add">
