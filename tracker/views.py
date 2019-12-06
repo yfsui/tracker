@@ -32,15 +32,15 @@ def update(request, Unique_Squirrel_ID):
 def stats(request):
     total = Squirrel.objects.all().count()
     adult = Squirrel.objects.filter(Age = 'Adult').count()
+    juvenile = Squirrel.objects.filter(Age = 'Juvenile').count() 
     fur = Squirrel.objects.filter(Primary_Fur_Color='Gray').count()
-    running = Squirrel.objects.filter(Running='True').count()
-    eating = Squirrel.objects.filter(Eating='True').count()
+    location = Squirrel.objects.filter(Location='Above Ground').count()
 
     context = {'total':total,
     'adult':adult,
+    'juvenile' = juvenile,
     'fur':fur,
-    'running':running,
-    'eating':eating,}
+    'location':location,}
     return render(request,'tracker/stats.html',context)
 
 def map(request):
