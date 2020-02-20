@@ -5,10 +5,6 @@
 
 <h3>Group Name and Section</h3>
 <p>Project Group 1, Section 1</p>
-
-
-<h3> UNI of Each Member</h3>
-<p> “UNIs: [ys3303, ys3273]” <p>
     
 <h3>Link to the App</h3>
 <p>https://glass-archway-253823.appspot.com/</p>
